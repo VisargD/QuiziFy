@@ -17,5 +17,5 @@ A simple quiz app that allows user to select from 3 categories and answer the tr
 <p>Each category has 7 different true/false questions. User needs to answer each question one by one. And at the end a result page is displayed with marks. The result page also contain a button to go back to category page and retake any quiz.</p>
 <p>
 <img src='https://github.com/VisargD/QuiziFy/blob/master/Screenshots/question.JPG' alt='Question page' height=500>
-<img src='https://github.com/VisargD/QuiziFy/blob/master/Screenshots/result.JPG' alt='Result page' height=500>
+<img src='https://github.com/VisargD/QuiziFy/blob/master/Screenshots/result%5B1%5D.jpg' alt='Result page' height=500>
 </p>
