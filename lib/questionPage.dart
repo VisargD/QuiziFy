@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:quizify/questionList.dart';
 import 'package:quizify/result.dart';
-import 'categories.dart';
 import 'questionList.dart';
 
 QuestionList questionList = QuestionList();
@@ -38,8 +36,10 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+
   int correct = 0;
   int questionNumber = 0;
+  List<Icon> scoreKeeper = [];
 
   void nextQuestion(context, correct) {
     if (questionNumber < 6) {
@@ -53,6 +53,16 @@ class _QuizPageState extends State<QuizPage> {
   void checkAnswer({QuestionList obj, bool answer, int counter}) {
     if (obj.getAnswer(name: lname, counter: counter) == answer) {
       correct++;
+      scoreKeeper.add(Icon(
+        Icons.check,
+        color: Colors.green,
+      ));
+    }
+    else {
+      scoreKeeper.add(Icon(
+        Icons.close,
+        color: Colors.red,
+      ));
     }
   }
 
@@ -81,7 +91,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
             Center(
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     color: Colors.white),
@@ -147,6 +157,9 @@ class _QuizPageState extends State<QuizPage> {
                         },
                         child: Text('False'),
                       ),
+                    ),
+                    Row(
+                      children: scoreKeeper,
                     ),
 
                   ],
