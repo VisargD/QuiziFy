@@ -19,3 +19,8 @@ A simple quiz app that allows user to select from 3 categories and answer the tr
 <img src='https://github.com/VisargD/QuiziFy/blob/master/Screenshots/question.JPG' alt='Question page' height=500>
 <img src='https://github.com/VisargD/QuiziFy/blob/master/Screenshots/result%5B1%5D.jpg' alt='Result page' height=500>
 </p>
+<br>
+
+<p>All images used in this app including the icon were taken from <a href="https://icons8.com/">Icons8</a></p>
+ 
+  
