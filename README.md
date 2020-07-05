@@ -21,6 +21,6 @@ A simple quiz app that allows user to select from 3 categories and answer the tr
 </p>
 <br>
 
-<p>All images used in this app including the icon were taken from <a href="https://icons8.com/">Icons8</a></p>
+<p>The icon of this app and the vector illustrations (background image of computer, sports and space category buttons on the category page and the background image of result page) were taken from <a href="https://icons8.com/">Icons8</a></p>
  
   
