@@ -7,7 +7,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,14 +34,12 @@ class StartPage extends StatelessWidget {
           ),
         ),
         child: SafeArea(
-
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image(
                   image: AssetImage('images/logo5.png'),
-
                 ),
                 Expanded(
                   flex: 1,
@@ -54,7 +51,6 @@ class StartPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Material(
                   elevation: 5,
                   borderRadius: BorderRadius.circular(30.0),
@@ -62,25 +58,20 @@ class StartPage extends StatelessWidget {
                   child: MaterialButton(
                     minWidth: MediaQuery.of(context).size.width,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Category()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Category()));
                     },
                     child: Text(
                       'Get Started',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
                 ),
-
-
               ],
             ),
           ),
         ),
       ),
-
     );
   }
 }

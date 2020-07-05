@@ -5,11 +5,11 @@ import 'package:quizify/result.dart';
 import 'questionList.dart';
 
 QuestionList questionList = QuestionList();
-String lname;
+String lName;
 
 class QuizApp extends StatelessWidget {
   QuizApp(String name) {
-    lname = name;
+    lName = name;
   }
 
   @override
@@ -17,7 +17,7 @@ class QuizApp extends StatelessWidget {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          body: QuizPage(lname),
+          body: QuizPage(),
         ),
       ),
     );
@@ -25,18 +25,11 @@ class QuizApp extends StatelessWidget {
 }
 
 class QuizPage extends StatefulWidget {
-  String listname;
-
-  QuizPage(String name) {
-    listname = name;
-  }
-
   @override
   _QuizPageState createState() => _QuizPageState();
 }
 
 class _QuizPageState extends State<QuizPage> {
-
   int correct = 0;
   int questionNumber = 0;
   List<Icon> scoreKeeper = [];
@@ -51,14 +44,13 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   void checkAnswer({QuestionList obj, bool answer, int counter}) {
-    if (obj.getAnswer(name: lname, counter: counter) == answer) {
+    if (obj.getAnswer(name: lName, counter: counter) == answer) {
       correct++;
       scoreKeeper.add(Icon(
         Icons.check,
         color: Colors.green,
       ));
-    }
-    else {
+    } else {
       scoreKeeper.add(Icon(
         Icons.close,
         color: Colors.red,
@@ -69,10 +61,8 @@ class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         decoration: BoxDecoration(
-
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -82,7 +72,6 @@ class _QuizPageState extends State<QuizPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
             Image(
               image: AssetImage('images/logo5.png'),
             ),
@@ -103,7 +92,7 @@ class _QuizPageState extends State<QuizPage> {
                     Expanded(
                       child: Text(
                         questionList.getQuestion(
-                            name: lname, counter: questionNumber),
+                            name: lName, counter: questionNumber),
                         style: TextStyle(
                           fontSize: 18,
                         ),
@@ -119,7 +108,6 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                       ),
                       child: FlatButton(
-
                         onPressed: () {
                           checkAnswer(
                               obj: questionList,
@@ -145,7 +133,6 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                       ),
                       child: FlatButton(
-
                         onPressed: () {
                           checkAnswer(
                               obj: questionList,
@@ -161,7 +148,6 @@ class _QuizPageState extends State<QuizPage> {
                     Row(
                       children: scoreKeeper,
                     ),
-
                   ],
                 ),
               ),
@@ -172,5 +158,3 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 }
-
-

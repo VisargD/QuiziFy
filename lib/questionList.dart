@@ -1,66 +1,49 @@
 import 'question.dart';
 
 class QuestionList {
-  int questionNumber = 0;
-  String name;
-
   List<Question> _computer = [
     Question(
-        ques:
-            'Freeware is software that is available for use at no monetary cost.',
-        ans: true),
+        'Freeware is software that is available for use at no monetary cost.',
+        true),
     Question(
-        ques:
-            'IPv6 Internet Protocol address is represented as eight groups of four Octal digits.',
-        ans: false),
-    Question(ques: 'GNU / Linux is a open source operating system.', ans: true),
+        'IPv6 Internet Protocol address is represented as eight groups of four Octal digits.',
+        false),
+    Question('GNU / Linux is a open source operating system.', true),
     Question(
-        ques:
-            'A compiler is a translation program that converts high-level instructions into a set of binary instructions (machine code) for execution.',
-        ans: true),
-    Question(ques: 'MS Word is a hardware.', ans: false),
+        'A compiler is a translation program that converts high-level instructions into a set of binary instructions (machine code) for execution.',
+        true),
+    Question('MS Word is a hardware.', false),
     Question(
-        ques:
-            'The language understood by the microprocessor is called assembly language.',
-        ans: false),
+        'The language understood by the microprocessor is called assembly language.',
+        false),
     Question(
-        ques:
-            'Network computing system and client/server computing are interchangeable terms.',
-        ans: true),
+        'Network computing system and client/server computing are interchangeable terms.',
+        true),
   ];
 
   List<Question> _sports = [
-    Question(ques: 'There has never been a woman chess master.', ans: false),
-    Question(ques: 'Polo is not an Olympic sport.', ans: true),
-    Question(
-        ques: 'In the Tour de France, the winner wears a yellow jersey.',
-        ans: true),
-    Question(ques: 'There are six balls in an over.', ans: true),
-    Question(ques: 'There are 30 balls in the game of snooker.', ans: false),
-    Question(ques: 'Cricket Is Same As Baseball.', ans: false),
-    Question(ques: 'Football is played within 540 minutes.', ans: false),
+    Question('There has never been a woman chess master.', false),
+    Question('Polo is not an Olympic sport.', true),
+    Question('In the Tour de France, the winner wears a yellow jersey.', true),
+    Question('There are six balls in an over.', true),
+    Question('There are 30 balls in the game of snooker.', false),
+    Question('Cricket Is Same As Baseball.', false),
+    Question('Football is played within 540 minutes.', false),
   ];
 
   List<Question> _space = [
+    Question('In 1991, there were 60,000 jellyfish orbiting Earth.', true),
     Question(
-        ques: 'In 1991, there were 60,000 jellyfish orbiting Earth.',
-        ans: true),
+        'The Great Wall of China is the only human-made object you can see from space.',
+        false),
+    Question('There\'s a class of stars that are just 25ºC.', true),
+    Question('The sun makes up 99.8% of the mass of the solar system.', true),
+    Question('The nearest black hole to Earth is just 1,600 light years away.',
+        false),
+    Question('The sun is yellow.', false),
     Question(
-        ques:
-            'The Great Wall of China is the only human-made object you can see from space.',
-        ans: false),
-    Question(ques: 'There\'s a class of stars that are just 25ºC.', ans: true),
-    Question(
-        ques: 'The sun makes up 99.8% of the mass of the solar system.',
-        ans: true),
-    Question(
-        ques: 'The nearest black hole to Earth is just 1,600 light years away.',
-        ans: false),
-    Question(ques: 'The sun is yellow.', ans: false),
-    Question(
-        ques:
-            'All of the other planets in the solar system could fit between Earth and the moon.',
-        ans: true),
+        'All of the other planets in the solar system could fit between Earth and the moon.',
+        true),
   ];
 
   String getQuestion({String name, int counter}) {

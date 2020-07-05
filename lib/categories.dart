@@ -51,8 +51,7 @@ class _CategoryState extends State<Category> {
                 children: <Widget>[
                   Text(
                     'Categories',
-                    style:
-                    TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                 ],
               ),
@@ -61,7 +60,10 @@ class _CategoryState extends State<Category> {
               padding: EdgeInsets.fromLTRB(10, 10, 10, 5),
               child: FlatButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => QuizApp('_computer')));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => QuizApp('_computer')));
                 },
                 child: Row(
                   children: <Widget>[
@@ -83,13 +85,14 @@ class _CategoryState extends State<Category> {
             SizedBox(
               height: 20,
             ),
-
             Container(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 5),
               child: FlatButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => QuizApp('_sports')));
-
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => QuizApp('_sports')));
                 },
                 child: Row(
                   children: <Widget>[
@@ -113,8 +116,10 @@ class _CategoryState extends State<Category> {
               padding: EdgeInsets.fromLTRB(10, 10, 10, 5),
               child: FlatButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => QuizApp('_space')));
-
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => QuizApp('_space')));
                 },
                 child: Row(
                   children: <Widget>[
